@@ -10,6 +10,8 @@
     "package": "plasmo package"
   },
   "dependencies": {
+    "lucide-react": "^0.562.0",
+    "motion": "^12.26.2",
     "plasmo": "0.90.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
