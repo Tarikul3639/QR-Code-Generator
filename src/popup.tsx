@@ -1,7 +1,6 @@
+import "./style"
 import Header from "@/component/Header"
 import TabSelector from "@/component/TabSelector"
-
-import "./style"
 
 function Popup() {
   return (
