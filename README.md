@@ -1,35 +1,48 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# QR-Code-Generator
 
-## Getting Started
+QR-Code-Generator is a simple and fast browser extension that converts any text or URL into a scannable QR code instantly. Share links, information, and data effortlessly.
 
-First, run the development server:
+## Features
 
-```bash
-pnpm dev
-# or
-npm run dev
-```
+- Generate QR codes from any text or URL.
+- Copy QR code image to clipboard.
+- Automatically fills current tab URL for quick generation.
+- Lightweight and easy to use.
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+## Installation
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+1. Clone or download this repository.
+2. Open Chrome and go to `chrome://extensions/`.
+3. Enable **Developer mode**.
+4. Click **Load unpacked** and select this project folder.
+5. The extension icon will appear in your toolbar.
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
+## Usage
 
-## Making production build
+1. Click the QR-Code-Generator icon in the toolbar.
+2. Enter your text or URL in the input box (auto-filled with current tab URL).
+3. Click **Generate** to create the QR code.
+4. Optional: Click **Copy QR** to copy the QR image to your clipboard.
 
-Run the following:
+## File Structure
 
-```bash
-pnpm build
-# or
-npm run build
-# OR carate own extension
-npm create plasmo -- . --with-tailwindcss
-```
+qr-code-generator/
+├── manifest.json
+├── popup.html
+├── popup.js
+├── qr.min.js
+├── style.css
+└── .gitignore
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
 
-## Submit to the webstores
+## Contributing
 
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+Feel free to fork this project and submit pull requests. Any contributions, bug reports, or feature suggestions are welcome.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Screenshot
+
+![QR Code Generator](screenshot.png)
