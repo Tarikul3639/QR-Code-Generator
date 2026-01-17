@@ -1,8 +1,6 @@
 import { motion } from "framer-motion"
 import { Link2, LucideIcon, Type, Wifi } from "lucide-react"
-import { useState } from "react"
-
-type ITab = "Text" | "URL" | "WiFi"
+import { ITab } from "@/types"
 
 interface TabConfig {
   id: ITab
@@ -16,19 +14,16 @@ const TABS: TabConfig[] = [
   { id: "WiFi", label: "WiFi", Icon: Wifi }
 ]
 
-const TabSelector: React.FC = () => {
-  const [selectedTab, setSelectedTab] = useState<ITab>("Text")
-
+const TabSelector: React.FC<{ tab: ITab; setTab: React.Dispatch<React.SetStateAction<ITab>> }> = ({ tab, setTab }) => {
   return (
-    <div className="w-full flex flex-col items-center px-4">
+    <div className="w-full flex flex-col items-center">
       <div className="flex w-full items-center justify-center rounded-[32px] bg-[#EBECEF] p-1 mt-2 dark:bg-zinc-900">
-        {TABS.map((tab) => {
-          const isActive = selectedTab === tab.id
-
+        {TABS.map((tabConfig) => {
+          const isActive = tab === tabConfig.id
           return (
             <button
-              key={tab.id}
-              onClick={() => setSelectedTab(tab.id)}
+              key={tabConfig.id}
+              onClick={() => setTab(tabConfig.id)}
               className="relative flex flex-1 flex-col items-center justify-center py-1 focus:outline-none transition-colors duration-300">
               {/* Active Background Pill - Image er moto ektu gap rakhar jonno inset use kora hoyeche */}
               {isActive && (
@@ -46,13 +41,13 @@ const TabSelector: React.FC = () => {
                     ? "text-[#22C55E]" // Image er bright green
                     : "text-[#717680] dark:text-zinc-500"
                 }`}>
-                <tab.Icon
+                <tabConfig.Icon
                   size={18}
                   strokeWidth={isActive ? 3 : 2}
                   className="transition-all duration-300"
                 />
                 <span className="text-[10px] font-semibold tracking-tight">
-                  {tab.label}
+                  {tabConfig.label}
                 </span>
               </div>
             </button>
