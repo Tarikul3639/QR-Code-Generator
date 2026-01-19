@@ -27,12 +27,35 @@ QR-Code-Generator is a simple and fast browser extension that converts any text 
 ## File Structure
 
 qr-code-generator/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── qr.min.js
-├── style.css
-└── .gitignore
+    ├── src
+        ├── types
+        │   ├── qrcode.d.ts
+        │   └── index.ts
+        ├── utils
+        │   └── generateQR.ts
+        ├── style.css
+        ├── component
+        │   ├── Header.tsx
+        │   ├── GenerateButton.tsx
+        │   ├── InputText.tsx
+        │   ├── QRPreview.tsx
+        │   ├── InputURL.tsx
+        │   ├── TabSelector.tsx
+        │   ├── Buttons.tsx
+        │   └── InputWIFI.tsx
+        └── popup.tsx
+    ├── public
+        └── ui.png
+    ├── assets
+        └── icon.png
+    ├── .vscode
+        └── settings.json
+    ├── postcss.config.js
+    ├── tailwind.config.js
+    ├── tsconfig.json
+    ├── .gitignore
+    ├── .prettierrc.mjs
+    ├── package.json
 
 
 ## Contributing
