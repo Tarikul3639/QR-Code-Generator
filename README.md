@@ -45,4 +45,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Screenshot
 
-![QR Code Generator](screenshot.png)
+![QR Code Generator](/public/ui.png)
