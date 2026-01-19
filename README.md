@@ -26,7 +26,7 @@ QR-Code-Generator is a simple and fast browser extension that converts any text 
 
 ## File Structure
 
-`qr-code-generator/
+```qr-code-generator/
     ├── src
         ├── types
         │   ├── qrcode.d.ts
@@ -56,7 +56,7 @@ QR-Code-Generator is a simple and fast browser extension that converts any text 
     ├── .gitignore
     ├── .prettierrc.mjs
     ├── package.json
-`
+```
 
 ## Contributing
 
